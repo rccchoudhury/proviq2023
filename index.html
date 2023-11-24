@@ -1,0 +1,318 @@
+<!DOCTYPE html><html><head>
+  <meta charset="utf-8">
+  <meta name="description" content="TEMPO: Efficient Multi-View Pose Estimation, Tracking, and Forecasting.">
+  <meta name="keywords" content="tempo, pose, 3d, multi-view">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TEMPO: Efficient Multi-View Pose Estimation, Tracking, and Forecasting</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="css/bulma-slider.min.css">
+  <link rel="stylesheet" href="css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="css/academicons.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <!-- <link rel="icon" href="fonts/snake.svg"> -->
+
+  <script src="js/jquery.min.js"></script>
+  <script defer src="js/fontawesome.all.min.js"></script>
+  <script src="js/bulma-carousel.min.js"></script>
+  <script src="js/bulma-slider.min.js"></script>
+  <script src="js/index.js"></script>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8DFG5F09VJ"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8DFG5F09VJ');
+</script></head>
+<!-- Google tag (gtag.js) -->
+
+
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class=" title is-1 publication-title"><span class="tempo">TEMPO</span>: Efficient Multi-View Pose Estimation, Tracking, and Forecasting</h1>
+            <div class="is-size-3 publication-authors">
+              <span class="author-block" id="author1">Rohan Choudhury,
+                <span class="author-block" id="author2">
+                  <a href="https://kriskitani.github.io/">Kris M. Kitani</a>,</span>
+                  <span class="author-block" id="author3">
+                  <a href="https://www.laszlojeni.com//">László A. Jeni</a></span>
+                </div>
+                <div class="is-size-3 publication-authors">
+                  <span class="author-block">Robotics Institute, Carnegie Mellon University</span>
+                </div>
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                    <!-- PDF Link. -->
+                    <!-- <span class="link-block">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span> -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2309.07910" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="150%" poster="./static/videos/teaser_web.png">
+        <source src="media/teaser_ego_exo.mp4" fetchpriority="high" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="tempo">TEMPO</span> accurately efficiently estimates and tracks poses from multiple camera views.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class=" title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+              Existing volumetric methods for predicting 3D human pose estimation are accurate, but computationally expensive and optimized for single time-step prediction. We
+              present <span class="tempo">TEMPO</span>, an efficient multi-view pose estimation model that learns a robust spatiotemporal representation,
+              improving pose accuracy while also tracking and forecasting human pose. We significantly reduce computation compared to the state-of-the-art by recurrently computing per-person 2D pose features, fusing both spatial and temporal
+              information into a single representation. In doing so, our model is able to use spatiotemporal context to predict more
+              accurate human poses without sacrificing efficiency. We further use this representation to track human poses over time as well as predict future poses. Finally, we demonstrate that our model is able to generalize across datasets
+              without scene-specific fine-tuning. <span class="tempo">TEMPO</span> achieves 10%
+              better MPJPE with a 33x improvement in FPS compared to TesseTrack on the challenging CMU Panoptic Studio dataset.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+              <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+              Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                   id="interpolation-slider"
+                   step="1" min="0" max="6" value="0" type="range">
+          </div>
+    </div>
+  </section> -->
+
+  <!-- Paper video. -->
+<!--     <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class=" title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3">How does it work?</h2>
+      <!-- Embed YouTube video -->
+      <iframe width="480" height="385" src="https://www.youtube.com/embed/jxmBQqmVkIw?si=nhVfaUs4fw1m6gtN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <h2 class="subtitle has-text-centered">
+        A brief explanation of <span class="tempo">TEMPO</span>.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<style>
+  iframe {
+    width: 400px;
+    height: 385px;
+  }
+</style>
+
+
+<section class="hero is-light is-small">
+  <div class="container">
+    <br>
+    <h2>Sample Results</h2>
+    We present some sample video results on YouTube. Click the thumbnails to play the videos.
+    <div class="video-grid">
+      <div class="video-cell">
+        <iframe width="480" height="385" src="https://www.youtube.com/embed/4ln80B9DYV8?si=36ANY7wMp_mPHqK_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p>Sample results for the pizza sequence.</p>
+      </div>
+      <div class="video-cell">
+        <iframe width="480" height="385" src="https://www.youtube.com/embed/dvxigx6hAhI?si=4J3fmCcuibyJch5F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p>Sample results for the Ian sequence.</p>
+      </div>
+      <div class="video-cell">
+        <iframe width="480" height="385" src="https://www.youtube.com/embed/eQ6asDwxI0E?si=thjvq07oH-Cf6pmf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p>Sample results for the haggling sequence.</p>
+      </div>
+      <div class="video-cell">
+        <iframe width="480" height="385" src="https://www.youtube.com/embed/eQ6asDwxI0E?si=thjvq07oH-Cf6pmf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <p>Sample results for the band sequence.</p>
+      </div>
+    </div>
+    <br>
+  </div>
+</section>
+
+<style>
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .video-cell {
+    margin: 5px;
+    text-align: center;
+  }
+
+  iframe {
+    width: 100%;
+    height: 385px;
+  }
+</style>
+
+
+<section class="hero is-small">
+  <div class="container">
+    <br>
+    <h2>Related Work</h2>
+    <ul>
+      <li>• <a href="https://arxiv.org/pdf/2207.10955.pdf">Faster VoxelPose: Real-time 3D Human Pose Estimation by Orthographic Projection</a></li>
+      <li>• <a href="https://arxiv.org/abs/2004.06239">VoxelPose: Towards Multi-Camera 3D Human Pose Estimation in Wild Environment</a></li>
+      <li>• <a href="https://www.cs.cmu.edu/~ILIM/projects/IM/TesseTrack/">TesseTrack: End-to-End Learnable Multi-Person Articulated 3D Pose Tracking</a></li>
+      <li>• <a href="https://arxiv.org/abs/1905.05754">Learnable Triangulation of Human Pose</a></li>
+      <li>• <a href="https://arxiv.org/abs/1912.05656">VIBE: Video Inference for Human Body Pose and Shape Estimation</a></li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="hero is-small" id="BibTeX">
+  <div class="container bibtex">
+    <h2>BibTeX</h2>
+    <div class="container is-max-desktop" style="margin-top:25px">
+      <pre class="columns "><code id="bibtex" class="column is-11">
+        @inproceedings{choudhury2023tempo,
+          title={TEMPO: Efficient Multi-View Pose Estimation, Tracking, and Forecasting},
+          author={Choudhury, Rohan and Kitani, Kris M. and Jeni, Laszlo A.},
+          booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+          year={2023}
+        }
+      }</code><button type="button" onclick="copyClipboard()" class="button-copy" title="Click to copy to clipboard"></button></pre>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="./static/viper_paper.pdf" disabled>
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/cvlab-columbia/viper" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content acknowledgements">
+          <p>
+            We thank Koichiro Niinuma for helpful feedback.
+          </p>
+          <p>
+            This research is based on work partially supported by Fujitsu. RC is supported by the NSF GRFP.
+          </p>
+          <p>
+            This webpage template was inspired by <a href="https://nerfies.github.io/">this</a> and <a href="https://viper.cs.columbia.edu">this</a> project pages.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+  function copyClipboard() {
+  // Get the text field
+    var r = document.createRange();
+    r.selectNode(document.getElementById("bibtex"));
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(r);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+
+  }
+</script>
+
+<!-- <script>
+  document.getElementById('teaser').play();
+</script> -->
+
+
+</body></html>
