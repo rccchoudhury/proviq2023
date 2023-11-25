@@ -180,15 +180,41 @@
         <p>Sample results from the MSR-VTT QA dataset.</p>
       </div>
       <div class="video-cell">
-        <<video id="teaser" muted playsinline width="600" height="482">
+        <video id="teaser" muted playsinline width="600" height="482">
           <source src="media/msvd_sample.mp4" fetchpriority="high" type="video/mp4">
         </video>
         <p>Sample results from the MSVD-QA dataset.</p>
       </div>
-      <div class="video-cell">
-        <iframe width="480" height="385" src="https://www.youtube.com/embed/eQ6asDwxI0E?si=thjvq07oH-Cf6pmf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <p>Sample results for the band sequence.</p>
+      <div class="child">
+        <div id="carouselExampleControls_logic" class="carousel slide" data-ride="false" data-interval="false" data-wrap="true">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleControls_logic" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleControls_logic" data-slide-to="1"></li>
+            <li data-target="#carouselExampleControls_logic" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" data-wrap="false">
+            <div class="carousel-item active">
+              <video id="teaser" muted playsinline width="600" height="482">
+                <source src="media/anet_q1.mp4" fetchpriority="high" type="video/mp4">
+              </video>
+            </div>
+            <div class="carousel-item" data-wrap="false">
+              <video id="teaser" muted playsinline width="600" height="482">
+                <source src="media/anet_q2.mp4" fetchpriority="high" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls_logic" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls_logic" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
       </div>
+    </div>
     </div>
     <br>
   </div>
@@ -231,23 +257,9 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link" href="./static/viper_paper.pdf" disabled>
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/cvlab-columbia/viper" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content acknowledgements">
-          <p>
-            We thank Koichiro Niinuma for helpful feedback.
-          </p>
-          <p>
-            This research is based on work partially supported by Fujitsu. RC is supported by the NSF GRFP.
-          </p>
           <p>
             This webpage template was inspired by <a href="https://nerfies.github.io/">this</a> and <a href="https://viper.cs.columbia.edu">this</a> project pages.
           </p>
